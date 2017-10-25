@@ -1,7 +1,7 @@
 """
 The MIT License (MIT)
 
-Copyright (c) [2015-2017] [Andrew Annex]
+Copyright (c) [2017] [Andrew Annex]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +23,7 @@ SOFTWARE.
 """
 
 """
+Written by Brian Carcich @drbitboy
 Purpose:
 
     Convert [BIG-IEEE] DE-405 SPK to native byte order;
@@ -58,6 +59,7 @@ Sample usage:
         python -c 'import make_de405s_native,sys;make_de405s_native.make_de405s_native(logFile=sys.stdout)'
 
 """
+__author__ = 'Brian Carcich'
 import os
 import sys
 import numpy
