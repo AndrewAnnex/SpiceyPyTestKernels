@@ -1,0 +1,15 @@
+*** spkpvn.c.n0066.original	2017-10-26 16:31:36.077528083 -0400
+--- spkpvn.c.n0066.patched	2017-10-27 17:04:38.990272098 -0400
+***************
+*** 499,504 ****
+--- 499,508 ----
+  	chkout_("SPKPVN", (ftnlen)6);
+  	return 0;
+      }
++     {
++     extern btclogspkpvn_ (integer*, doublereal*, doublereal*);
++         btclogspkpvn_ ( handle, descr, et);
++     }
+      chkout_("SPKPVN", (ftnlen)6);
+      return 0;
+  } /* spkpvn_ */
