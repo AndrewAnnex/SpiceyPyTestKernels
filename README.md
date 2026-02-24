@@ -33,6 +33,7 @@ Support unit testing in clones of the
     0b49545fa316f9053f5cfbcce155becc  de430sub.bsp
     2f4dba65649246d72836fb3b53823c3d  VEX_BOOM_V01.BC
     f59ef0556dfc63b55465e152f2d6f5a4  vo2_swu_ck2.bc
+    499df42543c652e4200a89075779c40a  de440s_2000_to_2020_simplified.bsp
 
 ## Source kernels
 
@@ -61,6 +62,7 @@ The original sources for most of these kernels are from the generic_kernels sect
     https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de430.bsp
     https://naif.jpl.nasa.gov/pub/naif/VEX/kernels/ck/VEX_BOOM_V01.BC
     https://naif.jpl.nasa.gov/pub/naif/VIKING/kernels/ck/vo2_swu_ck2.bc
+    https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de440s.bsp
 
 N.B. The DSK phobos_lores.bds comes from a 10deg x 10deg SPUD shape model of Phobos created by Peter C. Thomas at Cornell University, and is used by permission.
 
@@ -84,10 +86,17 @@ SPK_KERNEL = mro_psp4_ssd_mro95a_sub.bsp
   END_TIME        = 01 OCT 2007 00:00:00.000
 ```
 
+below is the command file used to make the de440s_2000_to_2020_simplified.bsp file
 
+```
+LEAPSECONDS_KERNEL  = naif0012.tls
 
-
-
-
+SPK_KERNEL = de440s_2000_to_2020_simplified.bsp
+  LOG_FILE = spkmerge.log
+  SOURCE_SPK_KERNEL = de440s.bsp
+    BODIES          = 1, 2, 3, 4, 5, 6, 7, 8, 9, 399
+  BEGIN_TIME      = 01 JAN 2000 00:00:00.000 TDB
+  END_TIME        = 01 JAN 2020 00:00:00.000 TDB
+```
 
 
